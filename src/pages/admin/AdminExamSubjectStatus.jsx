@@ -1,12 +1,18 @@
 import { useState } from 'react'
 import { Link, useLocation, useParams } from 'react-router-dom'
-import { EyeIcon } from '../../components/icons'
+import { EyeIcon, TeacherIcon } from '../../components/icons'
 import { fetchAdminExam } from '../../api/adminExams'
+import ExamContextBar from '../../components/ExamContextBar'
 import { useEffectDeduped } from '../../hooks/useEffectDeduped'
 import '../../styles/common.css'
 import '../TeacherAssessmentEditor.css'
 import '../TeacherSubjectExam.css'
 import './admin.css'
+
+function teacherSummary(teachers) {
+  if (!teachers || teachers.length === 0) return 'No teacher assigned'
+  return teachers.map((t) => `${t.name} (${t.email})`).join(', ')
+}
 
 export default function AdminExamSubjectStatus() {
   const { examId } = useParams()
@@ -21,8 +27,6 @@ export default function AdminExamSubjectStatus() {
   const [exam, setExam] = useState(null)
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState('')
-
-  const classId = exam?.school_class?.id
 
   useEffectDeduped(() => {
     load()
@@ -56,6 +60,7 @@ export default function AdminExamSubjectStatus() {
         &larr; Back to exams
       </Link>
       <h1>{exam.title} — subject status</h1>
+      <ExamContextBar className={exam.school_class?.name} />
 
       <section className="admin-panel admin-panel-single">
         <div className="user-list">
@@ -93,12 +98,16 @@ export default function AdminExamSubjectStatus() {
                         {subjectExam.sections.length} section{subjectExam.sections.length === 1 ? '' : 's'} ·{' '}
                         {totalQuestions} question{totalQuestions === 1 ? '' : 's'}
                       </p>
+                      <p className="assessment-card-meta assessment-card-teacher">
+                        <TeacherIcon />
+                        {teacherSummary(subjectExam.subject.teachers)}
+                      </p>
                     </div>
                     {submitted && (
                       <div className="assessment-card-actions">
                         <Link
                           to={`/admin/exams/${examId}/subjects/${subjectExam.id}`}
-                          state={{ classId }}
+                          state={backState}
                           className="icon-button"
                           aria-label={`View ${subjectExam.subject.name} questions and answers`}
                         >

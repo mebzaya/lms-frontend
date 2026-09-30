@@ -117,6 +117,19 @@
   font-size: 0.8rem;
 }
 
+.assessment-card-teacher {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.assessment-card-teacher svg {
+  flex-shrink: 0;
+  width: 0.85rem;
+  height: 0.85rem;
+  color: var(--vz-muted);
+}
+
 .assessment-card-actions {
   display: flex;
   gap: 0.35rem;
