@@ -1,0 +1,27 @@
+.attendance-summary-card {
+  max-width: none;
+  margin-bottom: 1.5rem;
+}
+
+.attendance-summary-card .report-card-footer {
+  flex-wrap: wrap;
+  padding: 1.25rem 1.5rem;
+}
+
+.attendance-history-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 22rem;
+  align-items: start;
+  gap: 1.5rem;
+}
+
+.attendance-history-table-wrap {
+  max-height: 28rem;
+  overflow-y: auto;
+}
+
+@media (max-width: 860px) {
+  .attendance-history-layout {
+    grid-template-columns: 1fr;
+  }
+}

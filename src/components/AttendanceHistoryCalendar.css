@@ -1,0 +1,59 @@
+.attendance-history-calendar {
+  max-width: 22rem;
+}
+
+.attendance-history-cell {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.3rem;
+  font-size: 0.85rem;
+  color: var(--vz-text);
+  border-radius: 4px;
+}
+
+.attendance-history-cell-blank {
+  cursor: default;
+}
+
+.attendance-history-cell-present {
+  background: rgba(40, 199, 111, 0.18);
+  color: #1a7f4b;
+  font-weight: 700;
+}
+
+.attendance-history-cell-absent {
+  background: rgba(234, 84, 85, 0.16);
+  color: #ba2d2e;
+  font-weight: 700;
+}
+
+.attendance-history-cell-join-right {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.attendance-history-cell-join-left {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.attendance-history-cell-today {
+  box-shadow: inset 0 0 0 1.5px var(--vz-primary-soft);
+}
+
+.attendance-history-legend-swatch-present {
+  background: rgba(40, 199, 111, 0.18);
+  box-shadow: inset 0 0 0 1px #1a7f4b33;
+}
+
+.attendance-history-legend-swatch-absent {
+  background: rgba(234, 84, 85, 0.16);
+  box-shadow: inset 0 0 0 1px #ba2d2e33;
+}
+
+.attendance-history-legend-swatch-none {
+  background: transparent;
+  box-shadow: inset 0 0 0 1px var(--vz-border-input);
+}

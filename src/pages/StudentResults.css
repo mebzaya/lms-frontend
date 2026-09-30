@@ -1,0 +1,10 @@
+.class-result-link {
+  display: inline-block;
+  color: var(--vz-primary);
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.class-result-link:hover {
+  color: var(--vz-primary-hover);
+}

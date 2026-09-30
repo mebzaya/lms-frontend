@@ -1,0 +1,54 @@
+.attendance-date-picker {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-bottom: 1.25rem;
+}
+
+.attendance-date-picker-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--vz-text);
+}
+
+.attendance-date-picker-trigger {
+  display: inline-flex;
+  align-items: center;
+  min-width: 11rem;
+  padding: 0.6rem 0.9rem;
+  border: 1px solid var(--vz-border-input);
+  border-radius: var(--vz-radius-sm);
+  background: #ffffff;
+  color: var(--vz-text-dark);
+  font-family: inherit;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.attendance-date-picker-trigger:hover {
+  border-color: var(--vz-primary-soft);
+}
+
+.attendance-date-picker-trigger[aria-expanded='true'] {
+  border-color: var(--vz-primary);
+  box-shadow: 0 0 0 3px var(--vz-primary-light);
+}
+
+.attendance-date-picker-popover {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  z-index: 20;
+  background: #ffffff;
+  border: 1px solid var(--vz-border);
+  border-radius: var(--vz-radius-lg);
+  box-shadow: var(--vz-shadow-lg);
+  padding: 1rem;
+}
+
+.attendance-date-picker-popover .attendance-calendar {
+  max-width: 20rem;
+  margin-bottom: 0;
+}

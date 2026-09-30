@@ -1,0 +1,118 @@
+.exam-hero {
+  align-items: flex-start;
+}
+
+.exam-section-block {
+  padding: 1.1rem 0;
+  border-top: 1px solid var(--vz-surface);
+}
+
+.exam-section-block:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+.exam-section-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.exam-section-icon {
+  display: flex;
+  color: var(--vz-primary);
+}
+
+.exam-section-title {
+  margin: 0;
+  color: var(--vz-heading);
+  font-size: 1.1rem;
+}
+
+.exam-section-instructions {
+  margin: 0 0 0.75rem;
+  color: var(--vz-body-text);
+}
+
+.exam-result-section {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--vz-surface);
+}
+
+.exam-result-section-title {
+  margin: 0 0 0.5rem;
+  font-weight: 600;
+  color: var(--vz-heading);
+}
+
+.exam-result-essay {
+  color: var(--vz-body-text);
+}
+
+.exam-result-essay-score {
+  margin: 0 0 0.5rem;
+  font-weight: 700;
+  color: var(--vz-heading);
+}
+
+.exam-result-essay-response {
+  margin: 0 0 0.75rem;
+  padding: 0.7rem 0.9rem;
+  background: #ffffff;
+  border: 1px solid var(--vz-border);
+  border-radius: 0.6rem;
+  color: var(--vz-text-dark);
+  white-space: pre-wrap;
+  line-height: 1.6;
+}
+
+.answer-pending {
+  background: var(--vz-warning-light);
+  color: #9a6a00;
+}
+
+.exam-result-questions {
+  gap: 0.6rem !important;
+}
+
+.exam-result-question {
+  display: flex !important;
+  flex-direction: column;
+  align-items: stretch !important;
+  gap: 0.35rem;
+  padding: 0.65rem 0.8rem !important;
+}
+
+.exam-result-question-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.exam-result-question-points {
+  color: var(--vz-muted);
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.exam-result-question-prompt {
+  margin: 0;
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  color: var(--vz-text-dark);
+  font-weight: 500;
+}
+
+.exam-result-answer-line {
+  margin: 0;
+  padding-left: 1.65rem;
+  color: var(--vz-body-text);
+  font-size: 0.86rem;
+}
+
+.exam-result-correct-line strong {
+  color: #1a7f4b;
+}

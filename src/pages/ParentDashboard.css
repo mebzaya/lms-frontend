@@ -1,0 +1,83 @@
+.parent-dashboard {
+  margin-top: 0.5rem;
+}
+
+.child-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  gap: 1rem;
+}
+
+.child-card {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  background: #ffffff;
+  border: 1px solid var(--vz-border);
+  border-radius: 0.9rem;
+  padding: 1.1rem 1.25rem;
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.child-card:hover {
+  border-color: var(--vz-border-input);
+  box-shadow: 0 10px 24px -18px rgba(47, 43, 61, 0.3);
+}
+
+.child-icon {
+  width: 2.75rem;
+  height: 2.75rem;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.75rem;
+  background: var(--vz-primary-light-solid);
+  color: var(--vz-primary);
+}
+
+.child-name {
+  margin: 0;
+  font-weight: 600;
+  color: var(--vz-heading);
+  font-size: 1.05rem;
+}
+
+.child-class {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin: 0.25rem 0 0;
+  color: var(--vz-body-text);
+  font-size: 0.85rem;
+}
+
+.child-class svg {
+  flex-shrink: 0;
+  width: 0.9rem;
+  height: 0.9rem;
+}
+
+.child-practice {
+  margin: 0.15rem 0 0;
+  color: var(--vz-muted);
+  font-size: 0.8rem;
+}
+
+.child-results-badge {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  background: var(--vz-surface);
+  color: var(--vz-muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.child-results-badge-published {
+  background: var(--vz-success-light);
+  color: #1a7f4b;
+}

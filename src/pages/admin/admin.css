@@ -1,0 +1,717 @@
+.admin-page h1 {
+  margin: 0 0 1.5rem;
+  color: var(--vz-heading);
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.stat-card {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  background: #ffffff;
+  border: 1px solid var(--vz-border);
+  border-radius: var(--vz-radius-lg);
+  padding: 1.1rem 1.25rem;
+  box-shadow: var(--vz-shadow);
+}
+
+.stat-icon {
+  width: 2.75rem;
+  height: 2.75rem;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.75rem;
+  background: var(--vz-primary-light-solid);
+  color: var(--vz-primary);
+}
+
+.stat-value {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--vz-heading);
+  line-height: 1.1;
+}
+
+.stat-label {
+  margin: 0.15rem 0 0;
+  color: var(--vz-body-text);
+  font-size: 0.85rem;
+}
+
+.admin-panel {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.admin-panel.admin-panel-single {
+  grid-template-columns: 1fr;
+}
+
+.add-button {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.user-list-header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.role-filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.9rem 0 1.1rem;
+}
+
+.user-list,
+.user-form-card {
+  /* .admin-panel is a CSS grid; a grid item's default min-width is auto
+     (its content's min-content size), not 0 — without this, wide content
+     anywhere inside (a chip row, a long title) grows the grid track, and
+     with it .admin-page/.app-content and the whole page, past the viewport. */
+  min-width: 0;
+  background: #ffffff;
+  border: 1px solid var(--vz-border);
+  border-radius: var(--vz-radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--vz-shadow);
+}
+
+.user-list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.user-list-header h2,
+.user-form-card h2 {
+  margin: 0;
+  color: var(--vz-heading);
+  font-size: 1.15rem;
+}
+
+.auth-card-subtitle {
+  margin: 0 0 1.5rem;
+  color: var(--vz-body-text);
+  font-size: 0.9rem;
+}
+
+.user-table-wrap {
+  overflow-x: auto;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.user-table th {
+  text-align: left;
+  color: var(--vz-body-text);
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: 0;
+  background: var(--vz-body-bg);
+  border-bottom: 1px solid var(--vz-border);
+}
+
+.user-table tbody tr:hover {
+  background: var(--vz-body-bg);
+}
+
+.sortable-header {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  width: 100%;
+  border: none;
+  background: transparent;
+  padding: 0.5rem 0.6rem;
+  margin: 0;
+  color: inherit;
+  font: inherit;
+  text-transform: inherit;
+  letter-spacing: inherit;
+  cursor: pointer;
+}
+
+.sortable-header:hover {
+  color: var(--vz-text);
+}
+
+.sort-indicator {
+  display: inline-flex;
+  width: 0.9rem;
+  height: 0.9rem;
+  flex-shrink: 0;
+}
+
+th[aria-sort="ascending"] .sortable-header,
+th[aria-sort="descending"] .sortable-header {
+  color: var(--vz-primary);
+}
+
+.user-table td {
+  padding: 0.65rem 0.6rem;
+  border-bottom: 1px solid var(--vz-surface);
+  color: var(--vz-text-dark);
+}
+
+.user-table-status {
+  text-align: center;
+  color: var(--vz-muted);
+  padding: 1.5rem 0.6rem;
+}
+
+.role-badge {
+  display: inline-block;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: var(--vz-surface);
+  color: var(--vz-body-text-2);
+}
+
+.role-admin {
+  background: #fff0dc;
+  color: #8a4a12;
+}
+
+.role-teacher {
+  background: #d9f9fd;
+  color: #0b7ea3;
+}
+
+.role-student {
+  background: #ddfaea;
+  color: #1a7f4b;
+}
+
+.role-parent {
+  background: var(--vz-primary-light-solid);
+  color: #675dd8;
+}
+
+.user-linked {
+  color: var(--vz-body-text);
+  max-width: 14rem;
+}
+
+.user-actions {
+  display: flex;
+  gap: 0.35rem;
+  white-space: nowrap;
+}
+
+.icon-button {
+  border: 1px solid var(--vz-border);
+  background: #ffffff;
+  color: var(--vz-body-text-2);
+  border-radius: 0.5rem;
+  width: 2rem;
+  height: 2rem;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.icon-button:hover {
+  background: var(--vz-surface);
+}
+
+.icon-button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.icon-button:disabled:hover {
+  background: #ffffff;
+}
+
+.icon-button-danger:hover {
+  background: #fce4e4;
+  color: #c53030;
+  border-color: #f5b8b8;
+}
+
+.icon-button-active {
+  border-color: var(--vz-primary);
+  color: var(--vz-primary);
+  background: var(--vz-primary-light);
+}
+
+.icon-button-active:hover {
+  background: var(--vz-primary-light);
+}
+
+.user-form-actions {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.cancel-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.7rem 1rem;
+  border: 1px solid var(--vz-border-input);
+  border-radius: 0.6rem;
+  background: white;
+  color: var(--vz-text);
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.cancel-button:hover {
+  background: var(--vz-surface);
+}
+
+.icon-text-link {
+  gap: 0.4rem;
+}
+
+.exam-review-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid var(--vz-border);
+}
+
+.exam-review-tab {
+  border: none;
+  background: none;
+  padding: 0.6rem 0.2rem;
+  margin-bottom: -1px;
+  border-bottom: 2px solid transparent;
+  color: var(--vz-body-text);
+  font-weight: 600;
+  font-size: 0.92rem;
+  cursor: pointer;
+}
+
+.exam-review-tab + .exam-review-tab {
+  margin-left: 1rem;
+}
+
+.exam-review-tab:hover {
+  color: var(--vz-text);
+}
+
+.exam-review-tab-active,
+.exam-review-tab-active:hover {
+  color: var(--vz-primary);
+  border-bottom-color: var(--vz-primary);
+}
+
+.exam-review-question-list {
+  margin: 0.9rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.exam-review-question {
+  padding: 0.75rem 0.9rem;
+  background: var(--vz-body-bg);
+  border: 1px solid var(--vz-border);
+  border-radius: 0.6rem;
+}
+
+.exam-review-question-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.exam-review-question-prompt {
+  margin: 0 0 0.5rem;
+  color: var(--vz-text-dark);
+  line-height: 1.55;
+  white-space: pre-wrap;
+}
+
+.exam-review-answer {
+  margin: 0.3rem 0;
+  color: var(--vz-body-text);
+  font-size: 0.88rem;
+}
+
+.save-new-button {
+  padding: 0.7rem 1rem;
+  border: 1.5px solid var(--vz-primary);
+  border-radius: 0.6rem;
+  background: #ffffff;
+  color: var(--vz-primary);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.save-new-button:hover:not(:disabled) {
+  background: var(--vz-primary-light);
+}
+
+.save-new-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.form-page {
+  max-width: 42rem;
+}
+
+.form-page .user-form-card {
+  background: #ffffff;
+  border: 1px solid var(--vz-border);
+  border-radius: var(--vz-radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--vz-shadow);
+}
+
+.form-success {
+  margin: 0 0 1rem;
+  padding: 0.65rem 0.9rem;
+  border-radius: 0.6rem;
+  background: var(--vz-success-light);
+  color: #1a7f4b;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.password-field {
+  position: relative;
+  display: flex;
+}
+
+.password-field input {
+  padding-right: 2.5rem;
+}
+
+.password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 0.5rem;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--vz-body-text);
+  cursor: pointer;
+  border-radius: 0.4rem;
+}
+
+.password-toggle:hover {
+  color: var(--vz-text);
+  background: var(--vz-surface);
+}
+
+.guardian-picker {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  color: var(--vz-text);
+  font-weight: 500;
+}
+
+.guardian-picker-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.guardian-picker-refresh {
+  border: none;
+  background: none;
+  padding: 0;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--vz-primary);
+  cursor: pointer;
+}
+
+.guardian-picker-refresh:hover {
+  text-decoration: underline;
+}
+
+.guardian-picker-search {
+  width: 100%;
+  padding: 0.4rem 0.65rem;
+  font-size: 0.85rem;
+  font-weight: 400;
+  border: 1px solid var(--vz-border);
+  border-radius: 0.5rem;
+  color: var(--vz-text-dark);
+}
+
+.guardian-picker-empty {
+  margin: 0;
+  font-weight: 400;
+  font-size: 0.85rem;
+  color: var(--vz-muted);
+}
+
+.guardian-picker-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  max-height: 11rem;
+  overflow-y: auto;
+  border: 1px solid var(--vz-border);
+  border-radius: 0.5rem;
+  padding: 0.4rem;
+}
+
+.guardian-picker-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: var(--vz-text-dark);
+}
+
+/* .auth-form label sets flex-direction: column with higher specificity
+   (class+element) than a bare .guardian-picker-option class, which stacked
+   the checkbox above the text instead of beside it — this wins the cascade
+   back for the row layout. */
+.auth-form .guardian-picker-option {
+  flex-direction: row;
+}
+
+.guardian-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.guardian-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.25rem 0.35rem 0.25rem 0.7rem;
+  border-radius: 999px;
+  background: var(--vz-primary-light);
+  color: var(--vz-primary);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.guardian-chip-remove {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.1rem;
+  height: 1.1rem;
+  border: none;
+  border-radius: 50%;
+  background: none;
+  color: inherit;
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.guardian-chip-remove:hover {
+  background: rgba(115, 103, 240, 0.2);
+}
+
+.guardian-option-row {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  width: 100%;
+  border: none;
+  background: none;
+  padding: 0.45rem 0.5rem;
+  border-radius: 0.5rem;
+  font: inherit;
+  color: var(--vz-text-dark);
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.12s ease;
+}
+
+.guardian-option-row:hover {
+  background: var(--vz-surface);
+}
+
+.guardian-option-row-selected,
+.guardian-option-row-selected:hover {
+  background: var(--vz-primary-light);
+}
+
+.guardian-option-avatar {
+  width: 1.85rem;
+  height: 1.85rem;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--vz-primary-gradient);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.7rem;
+}
+
+.guardian-option-icon {
+  width: 1.85rem;
+  height: 1.85rem;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  background: var(--vz-primary-light-solid);
+  color: var(--vz-primary);
+}
+
+.guardian-option-name {
+  flex: 1;
+  min-width: 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.guardian-option-meta {
+  font-weight: 400;
+  color: var(--vz-muted);
+}
+
+.guardian-option-check {
+  width: 1.1rem;
+  height: 1.1rem;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--vz-primary);
+}
+
+.user-form-card-rich {
+  max-width: 42rem;
+}
+
+.field-group-label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--vz-text);
+  margin-bottom: 0.5rem;
+}
+
+.role-picker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 0.25rem;
+}
+
+.role-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 1.1rem;
+  border: 1.5px solid var(--vz-border-input);
+  border-radius: 999px;
+  background: #ffffff;
+  color: var(--vz-body-text-2);
+  font-weight: 600;
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease, color 0.15s ease;
+}
+
+.role-pill svg {
+  width: 16px;
+  height: 16px;
+}
+
+.role-pill:hover {
+  border-color: var(--vz-primary-soft);
+  color: var(--vz-text);
+}
+
+.role-pill-selected,
+.role-pill-selected:hover {
+  border-color: var(--vz-primary);
+  background: var(--vz-primary-light);
+  color: var(--vz-primary);
+}
+
+.field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 640px) {
+  .field-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* A small read-only pill for a table cell whose number is inferred/computed
+   rather than a directly editable field (e.g. a class's student/teacher/
+   subject counts) — visually distinct from plain editable text cells, and
+   never clickable. */
+.stat-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  background: var(--vz-surface);
+  color: var(--vz-body-text-2);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: default;
+}
+
+.stat-pill svg {
+  flex-shrink: 0;
+  width: 0.85rem;
+  height: 0.85rem;
+  color: var(--vz-muted);
+}
+
+@media (max-width: 960px) {
+  .admin-panel {
+    grid-template-columns: 1fr;
+  }
+}

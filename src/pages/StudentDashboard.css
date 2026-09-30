@@ -1,0 +1,353 @@
+.student-status {
+  text-align: center;
+  color: var(--vz-body-text);
+  padding: 3rem 1.5rem;
+}
+
+.student-dashboard {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.class-summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: #ffffff;
+  border: 1px solid var(--vz-border);
+  border-radius: 1rem;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 12px 30px -20px rgba(47, 43, 61, 0.25);
+}
+
+.class-summary-identity {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.class-summary-icon {
+  width: 3rem;
+  height: 3rem;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.85rem;
+  background: var(--vz-primary-light-solid);
+  color: var(--vz-primary);
+}
+
+.class-summary-label {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--vz-muted);
+}
+
+.class-summary-name {
+  margin: 0.15rem 0 0;
+  font-size: 1.3rem;
+  color: var(--vz-heading);
+}
+
+.class-summary-stats {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.mini-stat {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  background: var(--vz-surface);
+  color: var(--vz-text);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.mini-stat svg {
+  color: var(--vz-primary);
+}
+
+.subject-exams-panel {
+  background: #ffffff;
+  border: 1px solid var(--vz-border);
+  border-radius: 1rem;
+  padding: 1rem 1.1rem;
+}
+
+.subject-exams-heading {
+  margin: 0 0 0.6rem;
+  color: var(--vz-heading);
+  font-size: 0.95rem;
+}
+
+.subject-exams-heading-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.subject-exams-heading-row .subject-exams-heading {
+  margin: 0;
+}
+
+.subject-exams-results-link {
+  flex-shrink: 0;
+  color: var(--vz-primary);
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-decoration: none;
+  margin-bottom: 0.6rem;
+}
+
+.subject-exams-results-link:hover {
+  color: var(--vz-primary-hover);
+}
+
+.exam-window-badge-scheduled {
+  background: #fff1cc;
+  color: #9a6a00;
+}
+
+.exam-window-badge-ended {
+  background: var(--vz-border);
+  color: var(--vz-body-text-2);
+}
+
+.subject-icon {
+  width: 2rem;
+  height: 2rem;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.6rem;
+  background: var(--vz-primary-light-solid);
+  color: var(--vz-primary);
+}
+
+.subject-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.subject-row {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  background: #ffffff;
+  border: 1px solid var(--vz-border);
+  border-radius: 0.85rem;
+  padding: 0.7rem 0.9rem;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.subject-row:hover {
+  border-color: var(--vz-primary-soft);
+  box-shadow: 0 10px 24px -18px rgba(47, 43, 61, 0.3);
+}
+
+.subject-row-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  flex: 1 1 10rem;
+}
+
+.subject-row-name {
+  font-weight: 600;
+  color: var(--vz-heading);
+  font-size: 0.95rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.subject-row-teacher {
+  color: var(--vz-muted);
+  font-size: 0.8rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.subject-row-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+  max-width: 14rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--vz-heading);
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.subject-row-muted {
+  color: var(--vz-muted);
+  font-weight: 400;
+}
+
+.subject-row-arrow {
+  flex-shrink: 0;
+  display: flex;
+  color: var(--vz-muted);
+  transform: rotate(-90deg);
+}
+
+/* Shared with TeacherAssessmentEditor.jsx / TeacherSubjectExamManage.jsx's
+   "questions-toggle" chevrons — Vite bundles all page CSS globally, so this
+   stays defined even though this page no longer uses it itself. */
+.subject-chevron {
+  display: flex;
+  color: var(--vz-muted);
+  transition: transform 0.15s ease;
+}
+
+.subject-chevron.open {
+  transform: rotate(180deg);
+}
+
+.lesson-list {
+  margin: 0;
+  padding: 0.6rem 0 0 1.1rem;
+  border-top: 1px solid var(--vz-surface);
+  color: var(--vz-text);
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.lesson-list-standalone {
+  padding: 0;
+  border-top: none;
+}
+
+.lesson-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.lesson-item-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.lesson-title {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  flex: 1 1 auto;
+  min-width: 0;
+  font-weight: 600;
+  color: var(--vz-heading);
+}
+
+.lesson-item-badges {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.3rem;
+}
+
+.lesson-read-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  flex-shrink: 0;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  background: var(--vz-primary-light-solid);
+  color: var(--vz-primary);
+  font-size: 0.72rem;
+  font-weight: 700;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.lesson-read-link:hover {
+  background: var(--vz-primary);
+  color: #ffffff;
+}
+
+.assessment-mini-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.assessment-mini-link {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0.5rem 0.6rem;
+  background: var(--vz-body-bg);
+  border: 1px solid var(--vz-border);
+  border-radius: 0.5rem;
+  text-decoration: none;
+  color: var(--vz-text);
+  font-size: 0.82rem;
+}
+
+.assessment-mini-link:hover {
+  border-color: var(--vz-border-input);
+  background: var(--vz-surface);
+}
+
+.assessment-mini-row {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-width: 0;
+}
+
+.assessment-mini-link svg {
+  flex-shrink: 0;
+  color: var(--vz-primary);
+}
+
+.assessment-mini-title {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.assessment-mini-summary {
+  color: var(--vz-muted);
+  font-size: 0.78rem;
+}
+
+.lesson-list-empty {
+  margin: 0.6rem 0 0;
+  padding-top: 0.6rem;
+  border-top: 1px solid var(--vz-surface);
+  color: var(--vz-muted);
+  font-size: 0.85rem;
+}
+

@@ -1,0 +1,63 @@
+.ranking-row-you {
+  background: var(--vz-primary-light);
+}
+
+.ranking-student-link {
+  border: none;
+  background: none;
+  padding: 0;
+  margin-right: 0.5rem;
+  color: var(--vz-primary);
+  font-weight: 600;
+  font-size: inherit;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.ranking-student-link:hover {
+  color: var(--vz-primary-hover);
+}
+
+.ranking-view-link {
+  border: none;
+  background: none;
+  padding: 0;
+  color: var(--vz-muted);
+  font-weight: 600;
+  font-size: 0.82rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.ranking-view-link:hover {
+  color: var(--vz-primary);
+}
+
+.rank-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.9rem;
+  height: 1.9rem;
+  padding: 0 0.4rem;
+  border-radius: 999px;
+  background: var(--vz-surface);
+  color: var(--vz-body-text-2);
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.rank-badge-1 {
+  background: linear-gradient(135deg, #ffd77a, #f5a623);
+  color: #6b4400;
+}
+
+.rank-badge-2 {
+  background: linear-gradient(135deg, #e2e8f0, #b8c2cc);
+  color: #3f4854;
+}
+
+.rank-badge-3 {
+  background: linear-gradient(135deg, #e6b98a, #c8824f);
+  color: #4a2a0e;
+}

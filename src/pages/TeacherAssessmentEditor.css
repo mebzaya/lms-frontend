@@ -1,0 +1,338 @@
+.nepali-toggle-wrap {
+  margin-bottom: 1rem;
+}
+
+.question-count-hint {
+  margin: -0.25rem 0 1rem;
+  color: var(--vz-body-text);
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.question-count-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: -0.25rem 0 1rem;
+}
+
+.question-count-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  background: var(--vz-surface);
+  color: var(--vz-body-text);
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.question-count-chip.total {
+  background: var(--vz-primary-light-solid);
+  color: #675dd8;
+}
+
+.blank-answer-editor {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--vz-text);
+  font-weight: 500;
+}
+
+.blank-answer-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.blank-answer-index {
+  flex-shrink: 0;
+  min-width: 4.5rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--vz-muted);
+}
+
+.blank-answer-row input {
+  flex: 1;
+  min-width: 0;
+}
+
+.assessment-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.assessment-card {
+  border: 1px solid var(--vz-border);
+  border-radius: 0.85rem;
+  padding: 0.9rem 1rem;
+  transition: box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.assessment-card:hover {
+  border-color: var(--vz-border-input);
+}
+
+.assessment-card-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.assessment-card-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.assessment-card-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.assessment-card-title {
+  margin: 0;
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 600;
+  color: var(--vz-heading);
+}
+
+.assessment-card-title-sub {
+  font-weight: 400;
+  color: var(--vz-muted);
+}
+
+.assessment-card-meta {
+  margin: 0.2rem 0 0;
+  color: var(--vz-body-text);
+  font-size: 0.8rem;
+}
+
+.assessment-card-actions {
+  display: flex;
+  gap: 0.35rem;
+  flex-shrink: 0;
+}
+
+.questions-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 0.75rem;
+  padding: 0.5rem 0.65rem;
+  background: var(--vz-body-bg);
+  border: 1px solid var(--vz-surface);
+  border-radius: 0.6rem;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+}
+
+.questions-toggle:hover {
+  background: var(--vz-surface);
+}
+
+.questions-toggle-label {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--vz-text);
+}
+
+.question-manager {
+  margin-top: 0.75rem;
+  padding: 0.9rem 1rem;
+  background: var(--vz-body-bg);
+  border: 1px solid var(--vz-surface);
+  border-radius: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.question-manager > .add-button {
+  align-self: flex-end;
+}
+
+.question-manage-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.question-manage-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #ffffff;
+  border: 1px solid var(--vz-border);
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.65rem;
+  font-size: 0.87rem;
+  color: var(--vz-text);
+}
+
+.question-manage-type {
+  flex-shrink: 0;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  background: var(--vz-body-bg);
+  color: var(--vz-muted);
+  font-size: 0.72rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.question-manage-prompt {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.question-manage-points {
+  flex-shrink: 0;
+  color: var(--vz-muted);
+  font-size: 0.78rem;
+}
+
+.question-form {
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--vz-border);
+  gap: 0.85rem !important;
+}
+
+.form-section-label {
+  margin: 0.25rem 0 -0.35rem;
+  color: var(--vz-muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.user-form-card .form-section-label:first-child {
+  margin-top: 0;
+}
+
+.mode-hint {
+  margin: 0;
+  color: var(--vz-body-text);
+  font-size: 0.78rem;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.field-row {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.field-row label {
+  flex: 1;
+  min-width: 0;
+}
+
+.option-editor {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  color: var(--vz-text);
+  font-weight: 500;
+}
+
+.option-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+/* Compound selector so this reliably beats `.auth-form label`'s
+   flex-direction: column (higher specificity) — without it the radio
+   and text input stack vertically instead of sitting side by side. */
+.option-rows .option-row {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.55rem 0.75rem;
+  border: 1.5px solid var(--vz-border);
+  border-radius: 0.65rem;
+  background: #ffffff;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+}
+
+.option-rows .option-row:hover {
+  border-color: var(--vz-primary-soft);
+  background: var(--vz-body-bg);
+}
+
+.option-rows .option-row:focus-within {
+  border-color: var(--vz-primary);
+  box-shadow: 0 0 0 3px var(--vz-primary-light);
+}
+
+.option-rows .option-row.selected {
+  border-color: var(--vz-primary);
+  background: var(--vz-primary-light-solid);
+}
+
+.option-rows .option-row input[type='radio'] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.option-letter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.7rem;
+  height: 1.7rem;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 1.5px solid var(--vz-border-input);
+  background: #ffffff;
+  color: var(--vz-body-text);
+  font-size: 0.8rem;
+  font-weight: 700;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.option-row.selected .option-letter {
+  border-color: var(--vz-primary);
+  background: var(--vz-primary);
+  color: #ffffff;
+}
+
+.option-editor .option-rows .option-row input[type='text'] {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  padding: 0;
+  font-size: 0.92rem;
+  background: transparent;
+}
+
+.points-field {
+  max-width: 8rem;
+}

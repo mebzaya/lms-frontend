@@ -1,0 +1,332 @@
+.app-shell {
+  display: flex;
+  min-height: 100svh;
+}
+
+.app-sidebar {
+  width: 260px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--vz-card-bg);
+  border-right: 1px solid var(--vz-border);
+  padding: 1.4rem 1rem;
+  transition: width 0.2s ease;
+}
+
+.app-shell-collapsed .app-sidebar {
+  width: 84px;
+}
+
+.app-sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0 0.5rem 1.75rem;
+}
+
+.app-logo-mark {
+  width: 2.1rem;
+  height: 2.1rem;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--vz-radius);
+  background: var(--vz-primary-gradient);
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 1rem;
+  box-shadow: var(--vz-shadow);
+}
+
+.app-logo-text {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--vz-heading);
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.app-shell-collapsed .app-logo-text {
+  display: none;
+}
+
+.app-sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.app-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.65rem 0.85rem;
+  border-radius: var(--vz-radius);
+  color: var(--vz-body-text);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.app-nav-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.app-nav-group-label {
+  margin: 0.6rem 0.85rem 0.1rem;
+  color: var(--vz-muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+.app-shell-collapsed .app-nav-group-label {
+  display: none;
+}
+
+.app-nav-icon {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.app-nav-link:hover {
+  background: var(--vz-primary-light);
+  color: var(--vz-primary);
+}
+
+.app-nav-link.active {
+  background: var(--vz-primary-gradient);
+  color: #ffffff;
+  box-shadow: 0 3px 10px 0 rgba(115, 103, 240, 0.45);
+}
+
+.app-shell-collapsed .app-nav-link {
+  justify-content: center;
+  padding: 0.65rem;
+}
+
+.app-shell-collapsed .app-nav-label {
+  display: none;
+}
+
+.app-body {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  height: 4.2rem;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 1.75rem;
+  background: var(--vz-card-bg);
+  border-bottom: 1px solid var(--vz-border);
+}
+
+.sidebar-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  color: var(--vz-body-text);
+  padding: 0.5rem;
+  border-radius: var(--vz-radius);
+  cursor: pointer;
+}
+
+.sidebar-toggle:hover {
+  background: var(--vz-body-bg);
+  color: var(--vz-primary);
+}
+
+.app-topbar-spacer {
+  flex: 1;
+}
+
+.app-user-menu {
+  position: relative;
+}
+
+.app-user-trigger {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border: none;
+  background: transparent;
+  padding: 0.3rem 0.4rem 0.3rem 0.75rem;
+  border-radius: var(--vz-radius-lg);
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.app-user-trigger:hover {
+  background: var(--vz-body-bg);
+}
+
+.app-user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  line-height: 1.25;
+}
+
+.app-user-name {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--vz-heading);
+}
+
+.app-user-role {
+  font-size: 0.72rem;
+  color: var(--vz-muted);
+  text-transform: capitalize;
+}
+
+.app-user-avatar {
+  width: 2.25rem;
+  height: 2.25rem;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--vz-primary-gradient);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.app-user-dropdown {
+  position: absolute;
+  top: calc(100% + 0.6rem);
+  right: 0;
+  width: 17rem;
+  background: var(--vz-card-bg);
+  border: 1px solid var(--vz-border);
+  border-radius: var(--vz-radius-lg);
+  box-shadow: var(--vz-shadow-lg);
+  padding: 0.6rem;
+  z-index: 20;
+}
+
+.app-user-dropdown-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0.6rem 0.85rem;
+}
+
+.app-dropdown-name {
+  margin: 0;
+  font-weight: 600;
+  font-size: 0.88rem;
+  color: var(--vz-heading);
+}
+
+.app-dropdown-email {
+  margin: 0.1rem 0 0;
+  font-size: 0.78rem;
+  color: var(--vz-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 12rem;
+}
+
+.app-dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  width: 100%;
+  padding: 0.6rem 0.6rem;
+  border: none;
+  background: transparent;
+  border-radius: var(--vz-radius);
+  color: var(--vz-text);
+  font: inherit;
+  font-size: 0.88rem;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.app-dropdown-item:hover {
+  background: var(--vz-primary-light);
+  color: var(--vz-primary);
+}
+
+.app-dropdown-item svg {
+  flex-shrink: 0;
+}
+
+.app-dropdown-divider {
+  height: 1px;
+  margin: 0.4rem 0.2rem;
+  background: var(--vz-border);
+}
+
+.app-dropdown-danger {
+  color: var(--vz-danger);
+}
+
+.app-dropdown-danger:hover {
+  background: var(--vz-danger-light);
+  color: var(--vz-danger);
+}
+
+.app-content {
+  flex: 1;
+  /* Without this, a flex item defaults to min-width: auto — it refuses to
+     shrink below its content's natural width, so any page whose content is
+     even a little wide (a long title, a row of chips, a table) silently
+     stretches the whole shell past the viewport instead of the content
+     wrapping/truncating/scrolling internally as its own CSS intends. */
+  min-width: 0;
+  padding: 1.75rem 2rem 4rem;
+}
+
+@media (max-width: 860px) {
+  .app-sidebar {
+    width: 84px;
+    padding: 1.4rem 0.6rem;
+  }
+
+  .app-logo-text {
+    display: none;
+  }
+
+  .app-nav-link {
+    justify-content: center;
+    padding: 0.65rem;
+  }
+
+  .app-nav-label {
+    display: none;
+  }
+
+  .app-content {
+    padding: 1.5rem 1.25rem 3rem;
+  }
+
+  .app-user-info {
+    display: none;
+  }
+}

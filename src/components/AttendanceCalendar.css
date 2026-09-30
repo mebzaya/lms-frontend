@@ -1,0 +1,164 @@
+.attendance-calendar {
+  max-width: 22rem;
+  margin-bottom: 1.25rem;
+}
+
+.attendance-calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.6rem;
+}
+
+.attendance-calendar-month-label {
+  font-weight: 700;
+  color: var(--vz-heading);
+  font-size: 0.95rem;
+}
+
+.attendance-calendar-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid var(--vz-border);
+  border-radius: 0.5rem;
+  background: #ffffff;
+  color: var(--vz-body-text);
+  cursor: pointer;
+}
+
+.attendance-calendar-nav:hover {
+  border-color: var(--vz-primary-soft);
+  color: var(--vz-primary);
+}
+
+.attendance-calendar-nav-arrow {
+  display: flex;
+  width: 14px;
+  height: 14px;
+}
+
+.attendance-calendar-nav-prev {
+  transform: rotate(90deg);
+}
+
+.attendance-calendar-nav-next {
+  transform: rotate(-90deg);
+}
+
+.attendance-calendar-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin-bottom: 0.2rem;
+}
+
+.attendance-calendar-weekdays span {
+  text-align: center;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--vz-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.attendance-calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  row-gap: 0.2rem;
+}
+
+.attendance-calendar-cell {
+  position: relative;
+  height: 2.3rem;
+  border: none;
+  background: none;
+  font: inherit;
+  font-size: 0.85rem;
+  color: var(--vz-text);
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.attendance-calendar-cell-blank {
+  cursor: default;
+}
+
+.attendance-calendar-cell:not(.attendance-calendar-cell-blank):not(.attendance-calendar-cell-recorded):hover {
+  background: var(--vz-surface);
+}
+
+/* The green "taught day" highlight — a plain, lightly-rounded rectangle
+   rather than a pill. Consecutive recorded days in the same row just lose
+   the rounding on whichever side touches the next recorded day — the grid
+   has no column gap, so the cells are already flush and read as one
+   continuous bar without needing to overlap them (overlapping two
+   semi-transparent green cells was compositing into a visibly darker seam,
+   which is exactly the bug this replaces). */
+.attendance-calendar-cell-recorded {
+  /* A touch darker than --vz-success-light (0.12 alpha) — that was almost
+     too faint to notice at a glance on a single day. */
+  background: rgba(40, 199, 111, 0.18);
+  color: #1a7f4b;
+  font-weight: 700;
+  border-radius: 4px;
+}
+
+.attendance-calendar-cell-recorded:hover {
+  background: rgba(40, 199, 111, 0.26);
+}
+
+.attendance-calendar-cell-recorded.attendance-calendar-cell-join-right {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.attendance-calendar-cell-recorded.attendance-calendar-cell-join-left {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.attendance-calendar-cell-today {
+  box-shadow: inset 0 0 0 1.5px var(--vz-primary-soft);
+}
+
+.attendance-calendar-cell-selected {
+  box-shadow: inset 0 0 0 2px var(--vz-primary);
+  color: var(--vz-primary);
+  font-weight: 700;
+}
+
+.attendance-calendar-cell-future {
+  color: var(--vz-border-input);
+  cursor: not-allowed;
+}
+
+.attendance-calendar-cell-future:hover {
+  background: none;
+}
+
+.attendance-calendar-legend {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.6rem;
+}
+
+.attendance-calendar-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.78rem;
+  color: var(--vz-muted);
+}
+
+.attendance-calendar-legend-swatch {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 999px;
+}
+
+.attendance-calendar-legend-swatch-recorded {
+  background: rgba(40, 199, 111, 0.18);
+  box-shadow: inset 0 0 0 1px #1a7f4b33;
+}

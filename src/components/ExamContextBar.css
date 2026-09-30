@@ -1,0 +1,24 @@
+.exam-context-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0 0 1.25rem;
+}
+
+.exam-context-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  background: var(--vz-primary-light-solid);
+  color: var(--vz-primary);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.exam-context-item svg {
+  width: 0.85rem;
+  height: 0.85rem;
+  flex-shrink: 0;
+}

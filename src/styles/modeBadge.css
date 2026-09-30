@@ -1,0 +1,28 @@
+.mode-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.mode-badge-practice {
+  background: #d9f9fd;
+  color: #0b7ea3;
+}
+
+.mode-badge-exam {
+  background: #fff0dc;
+  color: #b45309;
+}
+
+.language-badge {
+  background: var(--vz-success-light);
+  color: #1a7f4b;
+  text-transform: none;
+}

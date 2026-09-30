@@ -1,0 +1,92 @@
+.exam-status-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.exam-status-draft {
+  background: var(--vz-surface);
+  color: var(--vz-muted);
+}
+
+.exam-status-scheduled {
+  background: #fff1cc;
+  color: #9a6a00;
+}
+
+.exam-status-live {
+  background: #ddfaea;
+  color: #1f9d5c;
+}
+
+.exam-status-ended {
+  background: var(--vz-border);
+  color: var(--vz-body-text-2);
+}
+
+.exam-status-result_pending {
+  background: var(--vz-warning-light);
+  color: #b15c00;
+}
+
+.exam-status-result_published {
+  background: var(--vz-success-light);
+  color: #1a7f4b;
+}
+
+.exam-status-pill-link {
+  text-decoration: none;
+  cursor: pointer;
+  transition: filter 0.15s ease;
+}
+
+.exam-status-pill-link:hover {
+  filter: brightness(0.95);
+}
+
+.exam-publish-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.exam-publish-status {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.exam-publish-window {
+  color: var(--vz-body-text);
+  font-size: 0.85rem;
+}
+
+.exam-publish-form {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.exam-publish-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--vz-text);
+}
+
+.exam-publish-hint {
+  margin: 0.6rem 0 0;
+}

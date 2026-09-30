@@ -1,0 +1,81 @@
+.nepali-guide {
+  align-self: stretch;
+  border: 1px solid var(--vz-border);
+  border-radius: 0.65rem;
+  background: var(--vz-body-bg);
+  font-size: 0.85rem;
+  color: var(--vz-text);
+}
+
+.nepali-toggle-wrap .nepali-guide {
+  margin-top: 0.6rem;
+}
+
+.nepali-guide summary {
+  padding: 0.55rem 0.85rem;
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--vz-primary);
+}
+
+.nepali-guide[open] summary {
+  border-bottom: 1px solid var(--vz-border);
+}
+
+.nepali-guide-note {
+  margin: 0.6rem 0.85rem 0.5rem;
+  color: var(--vz-body-text);
+  line-height: 1.5;
+}
+
+.nepali-guide-table {
+  width: calc(100% - 1.7rem);
+  margin: 0 0.85rem;
+  border-collapse: collapse;
+}
+
+.nepali-guide-table th,
+.nepali-guide-table td {
+  padding: 0.3rem 0.4rem;
+  border-top: 1px solid var(--vz-border);
+  text-align: left;
+  vertical-align: top;
+}
+
+.nepali-guide-table th {
+  width: 8.5rem;
+  font-weight: 600;
+  color: var(--vz-muted);
+  font-size: 0.78rem;
+}
+
+.nepali-guide-roman {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.8rem;
+}
+
+.nepali-guide-devanagari {
+  font-size: 0.95rem;
+  color: var(--vz-heading);
+}
+
+.nepali-guide-examples {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
+  margin: 0.6rem 0.85rem 0.75rem;
+}
+
+.nepali-guide-examples code {
+  padding: 0.05rem 0.35rem;
+  border-radius: 0.3rem;
+  background: #ffffff;
+  border: 1px solid var(--vz-border);
+  font-size: 0.8rem;
+}
+
+@media (max-width: 480px) {
+  .nepali-guide-table th {
+    width: auto;
+  }
+}

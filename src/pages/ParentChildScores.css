@@ -1,0 +1,15 @@
+.child-scores h1,
+.results-page h1 {
+  margin: 0.5rem 0 1.25rem;
+  color: var(--vz-heading);
+}
+
+.child-scores-section {
+  margin-bottom: 2rem;
+}
+
+.class-results-heading {
+  margin: 0 0 0.75rem;
+  color: var(--vz-heading);
+  font-size: 1.05rem;
+}

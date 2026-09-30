@@ -1,0 +1,202 @@
+.attendance-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.attendance-class-title {
+  margin: 0;
+  color: var(--vz-heading);
+}
+
+.attendance-tabs {
+  display: flex;
+  gap: 0.4rem;
+  background: var(--vz-surface);
+  border-radius: 0.7rem;
+  padding: 0.25rem;
+}
+
+.attendance-tab {
+  border: none;
+  background: transparent;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--vz-body-text);
+  cursor: pointer;
+}
+
+.attendance-tab-active {
+  background: #ffffff;
+  color: var(--vz-primary);
+  box-shadow: var(--vz-shadow);
+}
+
+.attendance-summary-line {
+  margin: 0 0 0.85rem;
+  color: var(--vz-muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.attendance-roster {
+  list-style: none;
+  margin: 0 0 1.25rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.attendance-roster-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: #ffffff;
+  border: 1px solid var(--vz-border);
+  border-radius: 0.7rem;
+  padding: 0.7rem 1rem;
+}
+
+.attendance-student-name {
+  font-weight: 600;
+  color: var(--vz-heading);
+}
+
+.attendance-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  flex-shrink: 0;
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  font: inherit;
+}
+
+.attendance-toggle-track {
+  position: relative;
+  width: 2.6rem;
+  height: 1.5rem;
+  border-radius: 999px;
+  background: var(--vz-danger-light);
+  transition: background 0.15s ease;
+  flex-shrink: 0;
+}
+
+.attendance-toggle-present .attendance-toggle-track {
+  background: var(--vz-success);
+}
+
+.attendance-toggle-thumb {
+  position: absolute;
+  top: 0.15rem;
+  left: 0.15rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  transition: transform 0.15s ease;
+}
+
+.attendance-toggle-present .attendance-toggle-thumb {
+  transform: translateX(1.1rem);
+}
+
+.attendance-toggle-label {
+  min-width: 4rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.attendance-toggle-present .attendance-toggle-label {
+  color: #1a7f4b;
+}
+
+.attendance-toggle-absent .attendance-toggle-label {
+  color: #c53030;
+}
+
+.attendance-status-badge {
+  display: inline-block;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  background: var(--vz-surface);
+  color: var(--vz-muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.attendance-status-badge-present {
+  background: var(--vz-success-light);
+  color: #1a7f4b;
+}
+
+.attendance-status-badge-absent {
+  background: var(--vz-danger-light);
+  color: #c53030;
+}
+
+.attendance-report-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.attendance-report-title {
+  margin: 0;
+  color: var(--vz-heading);
+  font-size: 1.05rem;
+}
+
+.attendance-report-stats {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.attendance-report-stat {
+  color: var(--vz-body-text);
+  font-size: 0.85rem;
+}
+
+.attendance-report-stat strong {
+  color: var(--vz-heading);
+  font-size: 1rem;
+}
+
+.attendance-percentage-badge {
+  display: inline-block;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  background: var(--vz-surface);
+  color: var(--vz-muted);
+}
+
+.attendance-percentage-good {
+  background: var(--vz-success-light);
+  color: #1a7f4b;
+}
+
+.attendance-percentage-okay {
+  background: var(--vz-warning-light);
+  color: #9a6a00;
+}
+
+.attendance-percentage-low {
+  background: var(--vz-danger-light);
+  color: #c53030;
+}
