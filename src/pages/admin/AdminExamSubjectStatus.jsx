@@ -3,6 +3,7 @@ import { Link, useLocation, useParams } from 'react-router-dom'
 import { EyeIcon, TeacherIcon } from '../../components/icons'
 import { fetchAdminExam } from '../../api/adminExams'
 import ExamContextBar from '../../components/ExamContextBar'
+import ExamPublishPanel from '../../components/ExamPublishPanel'
 import { useEffectDeduped } from '../../hooks/useEffectDeduped'
 import '../../styles/common.css'
 import '../TeacherAssessmentEditor.css'
@@ -61,6 +62,8 @@ export default function AdminExamSubjectStatus() {
       </Link>
       <h1>{exam.title} — subject status</h1>
       <ExamContextBar className={exam.school_class?.name} />
+
+      <ExamPublishPanel exam={exam} onChange={setExam} />
 
       <section className="admin-panel admin-panel-single">
         <div className="user-list">
